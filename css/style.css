@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.image-container {
+  width: 85%;
+  margin-top: 30px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 100px;
+  overflow-x: hidden;
+}
+
+.top-images,
+.bottom-images {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.top-images img,
+.bottom-images img {
+  width: 175px;
+  height: 150px;
+  border-radius: 20px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.top-images {
+  margin-left: -90px !important;
+}
+
+.bottom-images {
+  margin-left: 90px;
+}
+
+.top-images img.active,
+.bottom-images img.active {
+  opacity: 1;
+}
+
+.progress-line {
+  position: relative;
+
+  height: 4px;
+  background: transparent;
+  margin: 20px -100px;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #000;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.stages {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: -6px;
+  width: 100%;
+}
+
+.stage {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  margin-left: 30px;
+  transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.stage.active {
+  background: #000;
+  border-color: #000;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+  background-color: #ddd;
+}
+
+.buttons button.active {
+  background-color: #000;
+  color: #fff;
+}
